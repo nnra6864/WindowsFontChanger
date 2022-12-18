@@ -6,14 +6,30 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
 	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <ApplicationIcon>Images\WindowsFontChangerLogo.ico</ApplicationIcon>
+    <ApplicationIcon>Images\WindowsFontChanger.ico</ApplicationIcon>
     <Company>Enenra</Company>
-    <PackageIcon>WindowsFontChangerLogo.png</PackageIcon>
+    <PackageIcon>WindowsFontChanger.png</PackageIcon>
     <Description>Change the default windows font to any of your liking.</Description>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\WindowsFontChanger.ico" />
     <None Remove="Images\WindowsFontChangerLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\WindowsFontChanger.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\WindowsFontChanger.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WindowsFontChanger.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -32,14 +48,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Images\WindowsFontChangerLogo.png">
+    <None Update="Images\WindowsFontChanger.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\" />
   </ItemGroup>
 
 </Project>

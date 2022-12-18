@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Windows10FontChanger"
         mc:Ignorable="d"
-        Title="Font Changer" Height="800" Width="500" Background="#003B4252" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Cascadia Mono Light" FontSize="16" WindowStyle="None" AllowsTransparency="True">
+        Title="Font Changer" Height="800" Width="500" Background="#003B4252" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Cascadia Mono Light" FontSize="16" WindowStyle="None" AllowsTransparency="True" Icon="/Images/WindowsFontChanger.png">
     <Border CornerRadius="20,20,20,20" BorderThickness="2,2,2,2" MouseDown="Border_MouseDown">
         <Border.BorderBrush>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
