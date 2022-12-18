@@ -1,0 +1,41 @@
+﻿<Window x:Class="Windows10FontChanger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Windows10FontChanger"
+        mc:Ignorable="d"
+        Title="Font Changer" Height="800" Width="500" Background="#003B4252" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Cascadia Mono Light" FontSize="16" WindowStyle="None" AllowsTransparency="True">
+    <Border CornerRadius="20,20,20,20" BorderThickness="2,2,2,2" MouseDown="Border_MouseDown">
+        <Border.BorderBrush>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#F24C566A"/>
+                <GradientStop Color="#F281A1C1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#F22E3440" Offset="0"/>
+                <GradientStop Color="#F24C566A" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Label x:Name="lblExample1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="50" HorizontalContentAlignment="Center" FontSize="30" Foreground="#FF88C0D0" FontFamily="Cascadia Mono Light" ToolTip="Letters and Numbers"/>
+            <Label x:Name="lblExample2" Content="+-*/=()_:.,&quot;&apos;" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="50" HorizontalContentAlignment="Center" FontSize="30" Margin="0,50,0,0" Foreground="#FF88C0D0" FontFamily="Cascadia Mono Light" ToolTip="Signs"/>
+            <Label x:Name="lblExample3" Content="&lt;= =&gt; &lt;=&gt; &amp;&amp; ||" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="50" HorizontalContentAlignment="Center" FontSize="30" Margin="0,100,0,0" FontFamily="Cascadia Mono Light" Foreground="#FF88C0D0" ToolTip="Special Signs"/>
+            <ComboBox x:Name="comBoxFonts" ItemsSource="{Binding Path=FontList, NotifyOnSourceUpdated=True}" VerticalAlignment="Top" HorizontalAlignment="Center" Width="300" Height="30" Margin="0,150,0,0" MaxDropDownHeight="500" Foreground="#FF88C0D0" SelectionChanged="comBoxFonts_SelectionChanged" FontFamily="Cascadia Mono Light" Background="#3F2E3440" TabIndex="0" ToolTip="Select the font of your choice."/>
+            <Button x:Name="btnApplyFont" Content="Apply" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontFamily="Cascadia Mono Light" Background="#3F2E3440" Foreground="#FF88C0D0" Width="125" Height="30" Margin="0,0,100,25" BorderThickness="2,2,2,2" Click="btnSelectFont_Click" TabIndex="2" ToolTip="Apply selected font"/>
+            <Button x:Name="btnResetFont" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Cascadia Mono Light" Background="#3F2E3440" Foreground="#FF88C0D0" Width="125" Height="30" BorderThickness="2,2,2,2" Margin="100,0,0,25" Click="btnResetFont_Click" TabIndex="3" ToolTip="Reset to default windows font"/>
+            <TextBox x:Name="tbFontTesting" TextWrapping="Wrap" Text="Test Your Font Here" Width="500" Height="550" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,125,0,0" BorderBrush="#19000000" CaretBrush="White" Foreground="#FF88C0D0" SelectionBrush="#FF2E3440" SelectionTextBrush="#FFB48EAD" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" TabIndex="1" ToolTip="You can write whatever you want here" AcceptsReturn="True">
+                <TextBox.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#0C000000" Offset="1"/>
+                        <GradientStop Color="#0CFFFFFF" Offset="0"/>
+                    </RadialGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Button x:Name="btnExit" Content="x" BorderThickness="0,0,0,0" Background="{x:Null}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Width="50" FontSize="30" TabIndex="5" BorderBrush="{x:Null}" Margin="0,10,10,0" Click="btnExit_Click"/>
+            <Button x:Name="btnMinimize" Content="-" BorderThickness="0,0,0,0" Background="{x:Null}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Width="50" FontSize="30" TabIndex="5" BorderBrush="{x:Null}" Margin="0,10,60,0" Click="btnMinimize_Click"/>
+        </Grid>
+    </Border>
+</Window>
