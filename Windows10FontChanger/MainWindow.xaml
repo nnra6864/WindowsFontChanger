@@ -20,7 +20,7 @@
             </LinearGradientBrush>
         </Border.Background>
         <Grid>
-            <Label x:Name="lblExample1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="50" HorizontalContentAlignment="Center" FontSize="30" Foreground="#FF88C0D0" FontFamily="Cascadia Mono Light" ToolTip="Letters and Numbers"/>
+            <Label x:Name="lblExample1" Content="AaBbCc1234567890" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="50" HorizontalContentAlignment="Center" FontSize="30" Foreground="#FF88C0D0" FontFamily="Cascadia Mono Light" ToolTip="Letters and Numbers"/>
             <Label x:Name="lblExample2" Content="+-*/=()_:.,&quot;&apos;" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="50" HorizontalContentAlignment="Center" FontSize="30" Margin="0,50,0,0" Foreground="#FF88C0D0" FontFamily="Cascadia Mono Light" ToolTip="Signs"/>
             <Label x:Name="lblExample3" Content="&lt;= =&gt; &lt;=&gt; &amp;&amp; ||" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="50" HorizontalContentAlignment="Center" FontSize="30" Margin="0,100,0,0" FontFamily="Cascadia Mono Light" Foreground="#FF88C0D0" ToolTip="Special Signs"/>
             <ComboBox x:Name="comBoxFonts" ItemsSource="{Binding Path=FontList, NotifyOnSourceUpdated=True}" VerticalAlignment="Top" HorizontalAlignment="Center" Width="300" Height="30" Margin="0,150,0,0" MaxDropDownHeight="500" Foreground="#FF88C0D0" SelectionChanged="comBoxFonts_SelectionChanged" FontFamily="Cascadia Mono Light" Background="#3F2E3440" TabIndex="0" ToolTip="Select the font of your choice."/>
@@ -34,8 +34,8 @@
                     </RadialGradientBrush>
                 </TextBox.Background>
             </TextBox>
-            <Button x:Name="btnExit" Content="x" BorderThickness="0,0,0,0" Background="{x:Null}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Width="50" FontSize="30" TabIndex="5" BorderBrush="{x:Null}" Margin="0,10,10,0" Click="btnExit_Click"/>
-            <Button x:Name="btnMinimize" Content="-" BorderThickness="0,0,0,0" Background="{x:Null}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Width="50" FontSize="30" TabIndex="5" BorderBrush="{x:Null}" Margin="0,10,60,0" Click="btnMinimize_Click"/>
+            <Button x:Name="btnExit" Content="x" BorderThickness="0,0,0,0" Background="{x:Null}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Width="50" FontSize="30" TabIndex="5" BorderBrush="{x:Null}" Margin="0,10,10,0" Click="btnExit_Click" ToolTip="Exit"/>
+            <Button x:Name="btnMinimize" Content="-" BorderThickness="0,0,0,0" Background="{x:Null}" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" UseLayoutRounding="False" Width="50" FontSize="30" TabIndex="5" BorderBrush="{x:Null}" Margin="0,10,60,0" Click="btnMinimize_Click" ToolTip="Minimize"/>
         </Grid>
     </Border>
 </Window>

@@ -10,6 +10,7 @@
     <Company>Enenra</Company>
     <PackageIcon>WindowsFontChanger.png</PackageIcon>
     <Description>Change the default windows font to any of your liking.</Description>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
@@ -53,5 +54,5 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-
+  
 </Project>
