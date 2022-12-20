@@ -24,7 +24,7 @@ namespace Windows10FontChanger
 
         Dictionary<string, string> _fontsToChange = new Dictionary<string, string>
         {
-            { "Segoe UI(TrueType)", "segoeui.ttf" },
+            { "Segoe UI (TrueType)", "segoeui.ttf" },
             { "Segoe UI Black (TrueType)", "seguibl.ttf" },
             { "Segoe UI Black Italic (TrueType)", "seguibli.ttf"},
             { "Segoe UI Bold (TrueType)", "segoeuib.ttf"},
@@ -129,6 +129,7 @@ namespace Windows10FontChanger
                 _fontsKey.SetValue(font.Key, font.Value);
             }
             _fontSubstitutesKey.SetValue("Segoe UI", "Segoe UI");
+            comBoxFonts.SelectedValue = _fontSubstitutesKey.GetValue("Segoe UI");
             if (RestartDialog()) Restart();
         }
 
