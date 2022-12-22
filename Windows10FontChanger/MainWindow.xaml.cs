@@ -24,7 +24,6 @@ namespace Windows10FontChanger
 
         Dictionary<string, string> _fontsToChange = new Dictionary<string, string>
         {
-            { "Segoe UI(TrueType)", "segoeui.ttf" },
             { "Segoe UI (TrueType)", "segoeui.ttf" },
             { "Segoe UI Black (TrueType)", "seguibl.ttf" },
             { "Segoe UI Black Italic (TrueType)", "seguibli.ttf"},
